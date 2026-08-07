@@ -176,7 +176,7 @@ export default function CarShowcaseSlider({
               </div>
 
               <button
-                onClick={() => setActiveStep(0)}
+                onClick={startDeliverySimulation}
                 className="px-6 py-2 bg-[var(--accent-color)] hover:bg-[var(--accent-color)]/90 text-white font-mono text-[10px] font-black tracking-widest uppercase transition-all duration-300 rounded shadow-[0_0_15px_rgba(232,0,13,0.3)] cursor-pointer mt-4"
               >
                 Restart Simulation

@@ -79,7 +79,6 @@ function App() {
   const [rightActiveIndex, setRightActiveIndex] = useState(null); // Closed by default to show clean HUD
   const [activeStep, setActiveStep] = useState(0); // Shared delivery step progress (starts at 0)
   const [isSimulating, setIsSimulating] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
 
   // Manage simulation interval securely
   useEffect(() => {
@@ -112,16 +111,6 @@ function App() {
     setIsSimulating(true);
   };
 
-  // Sync theme selection to document class list
-  useEffect(() => {
-    const root = document.documentElement;
-    if (isDarkMode) {
-      root.classList.remove('light');
-    } else {
-      root.classList.add('light');
-    }
-  }, [isDarkMode]);
-
   const handlePrevCar = () => {
     setActiveLap((prev) => (prev === 0 ? carImages.length - 1 : prev - 1));
   };
@@ -145,7 +134,7 @@ function App() {
 
 
       {/* TOP HEADER */}
-      <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Header />
 
       {/* HERO CONTROL BANNER */}
       <Hero subtitle={laps[activeLap].subtitle} />
