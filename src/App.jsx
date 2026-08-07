@@ -172,6 +172,7 @@ function App() {
           setActiveStep={setActiveStep}
           carImage={carImages[activeLap]}
           isSimulating={isSimulating}
+          startDeliverySimulation={startDeliverySimulation}
         />
 
         {/* RIGHT SECTION: Slanted preview status card & Right buttons */}

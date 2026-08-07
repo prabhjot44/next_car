@@ -9,7 +9,9 @@ export default function CarShowcaseSlider({
   rightActiveIndex,
   activeStep,
   setActiveStep,
-  carImage
+  carImage,
+  isSimulating,
+  startDeliverySimulation
 }) {
   const deliverySteps = [
     { title: 'Registration', subtitle: 'Fill form for submission' },
@@ -296,6 +298,17 @@ export default function CarShowcaseSlider({
               </div>
             );
           })}
+        </div>
+
+        {/* Step Action Button Below Tracking Line */}
+        <div className="w-full max-w-[400px] mx-auto mt-6 z-10">
+          <button
+            onClick={startDeliverySimulation}
+            disabled={isSimulating}
+            className="w-full py-2.5 bg-[var(--accent-color)] hover:bg-[var(--accent-color)]/90 disabled:bg-[var(--accent-color)]/40 disabled:text-white/50 disabled:cursor-not-allowed text-white font-mono text-[11px] font-black tracking-widest uppercase transition-all duration-300 rounded shadow-[0_0_15px_rgba(232,0,13,0.3)] hover:shadow-[0_0_20px_rgba(232,0,13,0.5)] cursor-pointer"
+          >
+            {isSimulating ? `SIMULATION ACTIVE (STAGE ${activeStep + 1}/7)` : "Confirm Stage Complete"}
+          </button>
         </div>
       </section>
     );
