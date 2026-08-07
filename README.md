@@ -1,18 +1,40 @@
-# React + Vite
+# TEQ Automotive Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A sleek, responsive, and highly interactive web application designed for a premium automotive showcase. The application features a dynamic theme toggle, interactive car carousel, and simulated delivery tracking.
 
-Currently, two official plugins are available:
+## 🚀 How to Run the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Follow these steps to get the project up and running on your local machine:
 
-## React Compiler
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your system.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Installation & Setup
 
-Note: This will impact Vite dev & build performances.
+1. **Clone the repository** (or download the project files and navigate to the root directory).
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+4. **Open in Browser**:
+   Once the server starts, open the local URL provided in your terminal (usually `http://localhost:5173`) in your web browser.
 
-## Expanding the Oxlint configuration
+### Building for Production
+To create an optimized production build, run:
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠 Tech Stack Used
+
+This project is built using modern, fast, and scalable web technologies:
+
+- **[React 19](https://react.dev/)**: For building the interactive user interface and modular components.
+- **[Vite 8](https://vitejs.dev/)**: A next-generation frontend tooling for ultra-fast development server startup and optimized production builds.
+- **[Tailwind CSS 3](https://tailwindcss.com/)**: For rapid, utility-first styling and responsive design.
+- **Vanilla CSS (Custom Properties)**: Used alongside Tailwind for maintaining a global design system and managing themes.
+- **Local Storage API**: Used to persist user preferences across sessions, such as the Light/Dark mode theme selection.
